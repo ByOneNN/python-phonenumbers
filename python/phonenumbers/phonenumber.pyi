@@ -40,7 +40,6 @@ class PhoneNumber(UnicodeMixin):
     def __unicode__(self) -> str: ...
 
 class FrozenPhoneNumber(PhoneNumber, ImmutableMixin):
-    @overload
     def __init__(self, numobj: PhoneNumber) -> None: ...
     @overload
     def __init__(
